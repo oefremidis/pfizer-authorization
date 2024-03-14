@@ -1,0 +1,20 @@
+GET http://localhost:3000
+
+###
+# do not forget to change the JWT
+# it will expire in 20 sec
+GET http://localhost:3000/protected
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzEwNDE1MTY1LCJleHAiOjE3MTA0MTUzNjV9.VU_m4h-OOs0SfaYl5JI7mmzlkI7XsEPWsZ_yek96jDg
+
+
+
+###
+# this is only for one key to be produced
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "1234"
+}
+
